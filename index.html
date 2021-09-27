@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheers</title>
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://kit.fontawesome.com/78175ca2f4.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <!-- Typing  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <style>
+        .swiper {
+          width: 100%;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          animation: swiper 3s forwards;
+        }
+        @keyframes swiper {
+          0%{
+            transform: scale(0)
+          }
+          100%{
+            transform: scale(1);
+          }
+        }
+  
+        .swiper-slide {
+          background-position: center;
+          background-size: cover;
+          width: 300px;
+          height: 300px;
+          background-color: #000;
+          /* -webkit-box-reflect: below 1px linear-gradient(transparent, transparent , rgba(0, 0, 0, 0.171)); */
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+        }
+      </style>
+</head>
+<body>
+        <div class="navbar" id="header">
+            <a class="nav_logo" href="#home">
+            Che<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path  d="M16.84,11.63A3,3,0,0,0,19,10.75l2.83-2.83a1,1,0,0,0,0-1.41,1,1,0,0,0-1.42,0L17.55,9.33a1,1,0,0,1-1.42,0h0L19.67,5.8a1,1,0,1,0-1.42-1.42L14.72,7.92a1,1,0,0,1,0-1.41l2.83-2.83a1,1,0,1,0-1.42-1.42L13.3,5.09a3,3,0,0,0,0,4.24h0L12,10.62,3.73,2.32l-.1-.06a.71.71,0,0,0-.17-.11l-.18-.07L3.16,2H3.09l-.2,0a.57.57,0,0,0-.18,0,.7.7,0,0,0-.17.09l-.16.1-.07,0-.06.1a1,1,0,0,0-.11.17,1.07,1.07,0,0,0-.07.19s0,.07,0,.11a11,11,0,0,0,3.11,9.34l2.64,2.63-5.41,5.4a1,1,0,0,0,0,1.42,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29L9.9,15.57h0l2.83-2.83h0l2-2A3,3,0,0,0,16.84,11.63ZM9.19,13.45,6.56,10.81A9.06,9.06,0,0,1,4,5.4L10.61,12Zm6.24.57A1,1,0,0,0,14,15.44l6.3,6.3A1,1,0,0,0,21,22a1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z"/></svg> <span class="span_color">ers</span></a>
+            <div class="nav_menu" id="nav_menu">
+            <ul class="nav_list grid">
+                <li class="nav_item">
+                    <a href="#home" class="nav_link active-link">
+                        <i class="uil uil-estate nav_icon"></i>Home
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#services" class="nav_link">
+                        <i class="uil uil-car-sideview nav_icon"></i>Services
+                    </a>
+                </li>
+                <li class="nav_item" >
+                    <a href="#about" class="nav_link">
+                        <i class="uil uil-user nav_icon"></i>About
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#gallery" class="nav_link">
+                        <i class="uil uil-images nav_icon"></i>Gallery
+                    </a>
+                </li>
+                <li class="nav_item menu_link" id="our_menu" >
+                    <a href="#menu" class="nav_link" id="nav_links">
+                        <i class="uil uil-draggabledots nav_icon"></i>Our Menu
+                    </a>
+                    <ul class="sub_menu" id="sub_menu" >
+                        <li class="sub_menu_item">
+                            <a href="#veg" class="nav_link">
+                                <img style="width: 20px; height: 20px" src="veg.png" alt="">
+                                 Veg
+                            </a></li><hr>
+                        <li class="sub_menu_item">
+                            <a href="#nonveg" class="nav_link">
+                                <img style="width: 20px; height: 20px" src="nonveg.png" alt="">
+                                NonVeg
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <ul class="down_menu">
+                    <li class="down_list">
+                        <a href="#veg" class="down_link nav_link">
+                            <img style="width: 20px; height: 20px" src="veg.png" alt="">
+                            Veg</a>
+                    </li>
+                    <li class="down_list" > 
+                        <a href="#nonveg" class="down_link nav_link">
+                        <img style="width: 20px; height: 20px" src="nonveg.png" alt="">
+                            Non-Veg</a>
+                       </li>
+                </ul>
+               
+                <li class="nav_item">
+                    <a href="#team" class="nav_link">
+                        <i class="uil uil-users-alt nav_icon"></i>Team
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#contact" class="nav_link">
+                        <i class="uil uil-link nav_icon"></i>Contact
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#opening" class="nav_link">
+                        <i class="uil uil-clock nav_icon"></i>Opening
+                    </a>
+                </li>
+            </ul>
+            <i class="uil uil-times-circle nav_close" id="nav_close"></i>
+      </div>
+        <div class="nav_btns">
+            <i class="uil uil-moon-eclipse change_theme" id="change_theme"></i>
+            <div class="nav_toggle" id="nav_toggle">
+                <i class="uil uil-list-ui-alt"></i>
+            </div>
+        </div>
+        </div>
+    
+        <h1 class="welcome">Welcome <span class="span_welcome typing">to cheers</span></h1>
+       <section class="home" id="home">
+           <h1 class="section_title yummy">Yummy <span class="yummy_veg">Veg</span> </h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="veg1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="veg2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="veg3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="veg4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="veg5.cms" />
+              </div>
+              <div class="swiper-slide">
+                <img src="veg6.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="veg7.cms" />
+              </div>
+              <div class="swiper-slide">
+                <img src="veg8.gif" />
+              </div>
+              <div class="swiper-slide">
+                <img src="veg9.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="veg10.jpg" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <h1 class="section_title yummy2">Yummy <span class="yummy_nonveg">Non-Veg</span> </h1>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="nv1.webp" />
+              </div>
+              <div class="swiper-slide">
+                <img src="nv2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="nv3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="nv4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="nv5.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="nv6.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="nv7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="nv8.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="nv9.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="nv10.jpg" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+
+        <section class="services" id="services">
+          <h1 class="section_title service_title">Services</h1>
+          <h3 class="section_subtitle service_subtitle">Our Services</h3>
+
+          <div class="service">
+          <div class="services_container">
+            <div class="icons_image">
+              <div class="icon_image">
+                <img src="F1.jpeg" alt="">
+              </div>
+              <div class="hover_image">
+                <div class="img_hov">
+             <h1 class="service_1">Kids Menu</h1>
+             <h3 class="service_11">Enjoy This Amazing Experience</h3>
+             <p class="service_111">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsam inventore neque beatae laboriosam alias dolor quia, deserunt modi adipisci perspiciatis sit laudantium vol</p>
+
+                </div>
+                <div class="content">
+                  <div class="details">
+                    <div class="name">Lorem Ipsum</div>
+                    <div class="job">Chef || Master</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="icons_image">
+              <div class="icon_image">
+                <img src="F2.jpg" alt="">
+              </div>
+              <div class="hover_image">
+                <div class="img_hov">
+                  <h1 class="service_1">DELICIOUS & FRESH</h1>
+                  <h3 class="service_11">Enjoy This Amazing Experience</h3>
+                  <p class="service_111">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsam inventore neque beatae laboriosam alias dolor quia, deserunt modi adipisci perspiciatis sit laudantium volu!</p>
+
+                </div>
+                <div class="content">
+                  <div class="details">
+                    <div class="name">Lorem Ipsum</div>
+                    <div class="job">Chef || Master</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="icons_image">
+              <div class="icon_image">
+                <img src="F3.jpeg" alt="">
+              </div>
+              <div class="hover_image">
+                <div class="img_hov">
+                  <h1 class="service_1">Fresh Baked Bread</h1>
+                  <h3 class="service_11">Enjoy This Amazing Experience</h3>
+                  <p class="service_111">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsam inventore neque beatae laboriosam alias dolor quia, deserunt modi adipisci perspiciatis sit lauda sapiente sit!</p>
+
+                </div>
+                <div class="content">
+                  <div class="details">
+                    <div class="name">Lorem Ipsum</div>
+                    <div class="job">Chef || Master</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="icons_image">
+              <div class="icon_image">
+                <img src="F4.jpg" alt="">
+              </div>
+              <div class="hover_image">
+                <div class="img_hov">
+                  <h1 class="service_1">Buffet Service</h1>
+             <h3 class="service_11">Enjoy This Amazing Experience</h3>
+             <p class="service_111">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsam inventore neque beatae laboriosam alias dolor quia, deserunt modi adipisci persp sapiente sit!</p>
+
+                </div>
+                <div class="content">
+                  <div class="details">
+                    <div class="name">Lorem Ipsum</div>
+                    <div class="job">Chef || Master</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="icons_image last">
+              <div class="icon_image">
+                <img src="F5.jpeg" alt="">
+              </div>
+              <div class="hover_image">
+                <div class="img_hov">
+                  <h3 class="service_11">Enjoy This Amazing Experience</h3>
+                  <div class="services_logo">
+                  <i class="fas fa-hamburger fontawesome"></i>
+                  <i class="fas fa-ice-cream fontawesome"></i>
+                  <i class="fas fa-fish fontawesome"></i></div>
+                </div>
+                <div class="content">
+                  <div class="details">
+                    <div class="name">Lorem Ipsum</div>
+                    <div class="job">Chef || Master</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div></div>
+
+          <div class="brands">
+            <h1 class="brand_heading">Brand we work with</h1>
+            <div class="brand_content">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active brand_img_div">
+                    <div class="images_brand">
+                    <img class="brand_logo" src="br1 (1).png" alt="">
+                    <img  class="brand_logo" src="br1 (2).png" alt="">
+                    <img class="brand_logo"  src="br1 (3).png" alt="">
+                    <img  class="brand_logo" src="br1 (4).png" alt=""></div>
+
+                  </div>
+                  <div class="carousel-item brand_img_div">
+                    <div class="images_brand">
+                      <img class="brand_logo" src="br3.jpg" alt="">
+                      <img  class="brand_logo" src="br4.png" alt="">
+                      <img class="brand_logo"  src="br5.jpg" alt="">
+                      <img  class="brand_logo" src="br2.png" alt=""></div>
+  
+                    </div>
+                  </div>
+                  <div class="carousel-item brand_img_div">
+                    <div class="images_brand">
+                      <img class="brand_logo" src="br1 (1).png" alt="">
+                      <img  class="brand_logo" src="br1 (2).png" alt="">
+                      <img class="brand_logo"  src="br1 (3).png" alt="">
+                      <img  class="brand_logo" src="br1 (4).png" alt=""></div>
+  
+                    </div>
+                  </div>
+                  <div class="carousel-item brand_img_div">
+                    <div class="images_brand">
+                      <img class="brand_logo" src="br3.jpg" alt="">
+                      <img  class="brand_logo" src="br4.png" alt="">
+                      <img class="brand_logo"  src="br5.jpg" alt="">
+                      <img  class="brand_logo" src="br2.png" alt=""></div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about" id="about">
+          <div class="about_section">
+            <h1 class="section_title about_heading">About</h1>
+            <h3 class="section_subtitle about_subheading">About Us</h3>
+
+            <div class="about_container">
+              <div class="about_tabs">
+                <div class="about_button1 about_active" data-target="#start" >
+                  <i class="uil uil-cloud-info"></i>How We Started
+                </div>
+                <div class="about_button2" data-target="#social">
+                  <i class="uil uil-streering"></i>Social Responsibility
+                </div>
+              </div>
+              <div class="about_sections">
+                <!-- about 1 -->
+                <div class="about_content about_active" data-content id="start">
+                  <div class="about_data">
+                    <div class="about_head">Here is how we started</div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sunt iusto blanditiis recusandae perspiciatis, provident nam maiores molestiae consequat!</p>
+                </div>
+                </div>
+
+                <!-- about 2 -->
+                <!-- data 1 -->
+                <div class="about_contents" data-content id="social">
+                <div class="about_datas">
+                  <div class="about_main">
+                  <div  class="about_title">Helping the Environment</div>
+                <p class="about_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sunt iusto blanditiis recusandae perspiciatis, provident nam maiores molestiae consequatur vero optio mollitia quaerat? Quae autem, sequi quos d</p>
+              </div>
+              
+              <div class="about_span">
+                <span class="about_rounder"></span>
+                <span class="about_line"></span>
+              </div>
+              </div>
+
+                      <!-- data 2 -->
+                      <div class="about_datas">
+                        <div></div>
+
+                        <div class="about_span">
+                          <span class="about_rounder"></span>
+                          <span class="about_line"></span>
+                        </div>
+
+                        <div class="about_main">
+                        <div  class="about_title">Helping the Environment</div>
+                      <p class="about_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sunt iusto blanditiis recusandae perspiciatis, provident nam maiores molestiae consequatur vero optio mollitia quaerat? Quae autem, sequi quos d</p>
+                    </div>
+                    
+                   
+                    </div>
+
+                          <!-- data 3 -->
+                  <div class="about_datas">
+                    <div class="about_main">
+                    <div  class="about_title">Helping the Environment</div>
+                  <p class="about_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sunt iusto blanditiis recusandae perspiciatis, provident nam maiores molestiae consequatur vero optio mollitia quaerat? Quae autem, sequi quos d</p>
+                </div>
+                
+                <div class="about_span">
+                  <span class="about_rounder"></span>
+                  <!-- <span class="about_line"></span> -->
+                </div>
+                </div>
+              </div>
+              </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+          <h3 class="section_title gallery_title">Gallery</h3>
+          <input class="gallery_input" type="radio" name="Photos" id="check1" checked>
+          <input class="gallery_input" type="radio" name="Photos" id="check2">
+          <input class="gallery_input" type="radio" name="Photos" id="check3">
+          <input class="gallery_input" type="radio" name="Photos" id="check4">
+          <div class="contain">
+          <div class="gallery_div">
+            <h3 class="Photo_head">Food <span class="span_gallery">Gallery</span></h3>
+            <label class="gallery_label" for="check1">All Photos</label>
+            <label class="gallery_label" for="check2">Desserts</label>
+            <label class="gallery_label" for="check3">Meals</label>
+            <label class="gallery_label" for="check4">Snacks</label>
+          </div>
+          <div class="photo_gallery">
+            <div class="food_div desserts">
+              <img src="F1.jpeg" alt="">
+            </div>
+            <div class="food_div meals">
+              <img src="V1.jpg" alt="">
+            </div>
+            <div class="food_div snacks">
+              <img src="SC1.jpeg" alt="">
+            </div>
+            <div class="food_div snacks">
+              <img src="SC2.jpg" alt="">
+            </div>
+              <div class="food_div meals">
+              <img src="V2.jpg" alt="">
+            </div>
+            <div class="food_div desserts">
+              <img src="f8.jpg" alt="">
+            </div>
+            <div class="food_div snacks">
+              <img src="SC5.jpg" alt="">
+            </div>
+            <div class="food_div desserts">
+              <img src="F9.jpg" alt="">
+            </div>
+            <div class="food_div desserts">
+              <img src="F6.jpeg" alt="">
+            </div>
+            <div class="food_div snacks">
+              <img src="SC3.jpg" alt="">
+            </div>
+            <div class="food_div snacks">
+              <img src="SC4.jpg" alt="">
+            </div>
+            <div class="food_div desserts">
+              <img src="F7.jpeg" alt="">
+            </div>
+            <div class="food_div meals">
+              <img src="V3.jpg" alt="">
+            </div>
+            <div class="food_div meals">
+              <img src="V4.jpg" alt="">
+            </div>
+            <div class="food_div  desserts">
+              <img src="F2.jpg" alt="">
+            </div>
+            <div class="food_div snacks">
+              <img src="SC6.jpg" alt="">
+            </div>
+            <div class="food_div  desserts">
+              <img src="F3.jpeg" alt="">
+            </div>
+            <div class="food_div  desserts">
+              <img src="F4.jpg" alt="">
+            </div>
+            <div class="food_div desserts">
+              <img src="F5.jpeg" alt="">
+            </div>
+            <div class="food_div snacks">
+              <img src="SC7.jpg" alt="">
+            </div>
+            <div class="food_div meals">
+              <img src="V5.jpg" alt="">
+            </div>
+            <div class="food_div meals">
+              <img src="V6.jpg" alt="">
+            </div>
+            <div class="food_div meals">
+              <img src="V7.jpg" alt="">
+            </div>
+            <div class="food_div meals">
+              <img src="v8.jpg" alt="">
+            </div>
+            <div class="food_div meals">
+              <img src="V9.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        </section>
+        <section class="menu" id="menu">
+            <h1 class="section_title menu_title">Our <span class="menu_span">Menu</span></h1>
+            <h2 class="section_subtitle">Love to Serve</h2>
+            <div class="menu_container" id="veg">
+
+                <!-- Menu 1 -->
+                <div class="menu_content menu_open">
+                  <div class="menu_header">
+                    <div class="snacks_here">
+                    <i class="fas fa-cookie menu_font"></i>
+                    <div class="menu_snacks">
+                      <h1 class="menu_top">Snacks</h1>
+                      <p class="menu_bottom">Healthy and Tasty</p>
+                    </div></div>
+                    <i class="uil uil-angle-down"></i></div>
+                  
+
+                  <div class="menu_list">
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="SC1.jpeg" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Egg Salad</p>
+                          <p class="menu_price">7$</p>
+                        </div>
+                      </div>
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="SC2.jpg" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Pakoda</p>
+                          <p class="menu_price">4$</p>
+                        </div>
+                      </div>
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="SC3.jpg" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Veg Rolls</p>
+                          <p class="menu_price">6$</p>
+                        </div>
+                      </div>
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="SC4.jpg" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Mirchi Pakoda</p>
+                          <p class="menu_price">5$</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Menu 2 -->
+                <div class="menu_content menu_close" id="nonveg">
+                  <div class="menu_header">
+                    <div class="snacks_here">
+                      <i class="fas fa-seedling menu_font"></i>
+                    <div class="menu_snacks">
+                      <h1 class="menu_top">Veg</h1>
+                      <p class="menu_bottom">Healthy and Tasty</p>
+                    </div></div>
+                    <i class="uil uil-angle-down"></i></div>
+                  
+
+                  <div class="menu_list">
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="veg1.jpg" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Pulaav</p>
+                          <p class="menu_price">14$</p>
+                        </div>
+                      </div>
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="veg2.jpg" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Kofta</p>
+                          <p class="menu_price">10$</p>
+                        </div>
+                      </div>
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="veg3.jpg" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Manchurain</p>
+                          <p class="menu_price">15$</p>
+                        </div>
+                      </div>
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="veg4.jpg" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Mashroom Curry</p>
+                          <p class="menu_price">20$</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Menu 3 -->
+                <div class="menu_content menu_close">
+                  <div class="menu_header">
+                    <div class="snacks_here">
+                      <i class="fas fa-drumstick-bite menu_font"></i>
+                    <div class="menu_snacks">
+                      <h1 class="menu_top">Non-Veg</h1>
+                      <p class="menu_bottom">Healthy and Tasty</p>
+                    </div></div>
+                    <i class="uil uil-angle-down"></i></div>
+                  
+
+                  <div class="menu_list">
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="nv1.webp" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Fried Chichen</p>
+                          <p class="menu_price">12$</p>
+                        </div>
+                      </div>
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="nv2.jpg" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Fish Curry</p>
+                          <p class="menu_price">15$</p>
+                        </div>
+                      </div>
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="nv3.jpg" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Kadhaai Chichen</p>
+                          <p class="menu_price">20$</p>
+                        </div>
+                      </div>
+                      <div class="menu_info">
+                        <div class="menu_img">
+                        <img src="nv4.jpg" alt=""></div>
+                        <div class="second_info">
+                          <p class="menu_name">Egg Curry</p>
+                          <p class="menu_price">10$</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                
+                </div>
+              </div>
+            </div>
+        </section>
+        <div class="team_head">
+          <h1 class="team_title section_title">Team</h1>
+          <h2 class="team_subtitle section_subtitle">Our <span class="team_span">Team</span> </h2>
+        </div>
+        <section class="team" id="team">
+          <div class="row">
+            <div class="col" data-aos="flip-left" >
+            <img src="chef1.jpg" alt="" class="team_pic">
+            <div class="layer">
+            <img src="chef1.jpg" alt="">
+            </div>
+            <div class="team_info">
+              <h4 class="team_info_head">Paul bimnaal</h4>
+              <p class="team_info_para">Founder</p>
+            </div>
+            </div>
+
+            <div class="col" data-aos="flip-left" >
+            <img src="chef2.png" alt="" class="team_pic">
+            <div class="layer">
+              <img src="chef2.png" alt="">
+              </div>
+            <div class="team_info">
+              <h4 class="team_info_head">Diana Wells</h4>
+              <p class="team_info_para">Head</p>
+            </div>
+            </div>
+
+            <div class="col" data-aos="flip-left">
+            <img src="chef3.jpg" alt="" class="team_pic">
+            <div class="layer">
+              <img src="chef3.jpg" alt="">
+              </div>
+            <div class="team_info">
+              <h4 class="team_info_head">hakwin lakhyi</h4>
+              <p class="team_info_para">Manager</p>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="contact_heading">
+            <h1 class="contact_head section_title">
+                Contact <span class="contact_span">Us</span> 
+            </h1>
+            <h2 class="section_subtitle contact_subhead">Below are our deatils</h2></div>
+            <section class="contact" id="contact">
+                <div class="contact_full">
+                <div class="contact_fill" data-aos="flip-left">
+                    <h1 class="section_title">Reservation</h1>
+                    <form action="" class="contact_form">
+                        <div class="input_fill">
+                            <input type="text" class="input_fillout" placeholder="Name">
+                        </div>
+                        <div class="input_fill">
+                            <input type="text" class="input_fillout" placeholder="Email ID">
+                        </div>
+                        <div class="input_fill">
+                            <input type="text" class="input_fillout" placeholder="Subject">
+                        </div>
+                        <div class="input_fill">
+                            <input type="text" class="input_fillout" placeholder="Date and Time">
+                        </div>
+                        <div class="input_message">
+                            <input type="text" class="input_fillout input_entermessage" placeholder="Message">
+                        </div>
+                        <div class="submit">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact_info" data-aos="flip-left">
+                    <h1 class="section_title">Information</h1>
+                    <p class="additional">Contact for additional information:<br><a href="#home">cheers@site.com</a>or call us 6302109482<br>We are located at Imaginary Coffee City, 304.</p>
+                    <div class="contact_icons">
+                        <i class="uil uil-twitter-alt contact_icon"></i>
+                        <i class="uil uil-facebook contact_icon"></i>
+                        <i class="uil uil-linkedin-alt contact_icon"></i>
+                        <i class="uil uil-instagram contact_icon"></i>
+                        <i class="uil uil-github-alt contact_icon"></i>
+                    </div>
+                </div>
+            </div>
+            </section>
+        <section id="opening" class="opening">
+            <video autoplay muted loop>
+                <source src="food.mp4" type="video/mp4">
+            </video>
+            <div class="video_content">
+                <div class="video_header">
+                <h1 class="video_head">Opening Hours</h1>
+                <h2 class="video_subhead">Calls for Reservation</h2></div>
+                <div class="design">
+                    <span class="span_design"></span>
+                </div>
+                <div class="day">
+                    <div class="day1">
+                        <h2 class="day_name video_subhead">Sunday to Tuesday</h2>
+                        <div class="time">
+                            <h1 class="video_head">09:00
+                            </h1>
+                            <h1 class="video_head">22:00
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="day2">
+                        <h2 class="day_name video_subhead">Friday to Saturday</h2>
+                        <div class="time">
+                            <h1 class="video_head">11:00
+                            </h1>
+                            <h1 class="video_head">19:00
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="number"><i class="uil uil-phone-volume phone_number"></i>6302109482</div>
+            </div>
+        </section>
+
+
+
+       
+        
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-circle-up scroll_up_icon"></i>
+        </a>
+        <script src="script.js"></script>
+         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+         <script>
+           AOS.init();
+
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        loop:true,
+        autoplay:{
+            delay:2500,
+            disableOnInteraction:false,
+        },
+      });
+    </script>
+          </script>
+          <script src="swiper-bundle.min.js"></script>
+</body>
+</html>
